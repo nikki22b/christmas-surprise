@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import SkiSection from './sections/skiSection/skiSection';
+import Stage from './sections/stage/stage';
 
-function App() {
+function ChristmasCard() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{minHeight: 10000}}>
+      <Stage />
+      <SkiSection />
     </div>
   );
 }
 
-export default App;
+export default ChristmasCard;

@@ -1,0 +1,27 @@
+.skiSection {
+    width: 100%;
+    max-width: 480px;
+    padding-top: 48px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: clip;
+    &__skiGirl {
+        width: 130px;
+        position: absolute;
+        bottom: 140px;
+        left: calc(50% + 70px);
+    }
+    &__mainline {
+        max-width: 11rem;
+        font-size: 36px !important;
+        line-height: 36px !important;
+        z-index: 3;
+        position: relative;
+    }
+    &__content {
+        padding: 60px 36px;
+    }
+}
