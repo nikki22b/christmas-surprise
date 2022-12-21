@@ -1,0 +1,43 @@
+.biathlonSection {
+    width: 100%;
+    max-width: 480px;
+    padding-top: 48px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: clip;
+    &__visuals {
+        position: absolute;
+        bottom: 0px;
+        left: calc(50% - 280px);
+    }
+    &__biathletin {
+        width: 330px;
+    }
+    &__shoot {
+        position: absolute;
+        right: 0;
+        top: 25px;
+        width: 30px;
+    }
+    &__bullet {
+        position: absolute;
+        right: -3;
+        top: 34px;
+        width: 5px;
+    }
+    &__mainline {
+        max-width: 11rem;
+        font-size: 36px !important;
+        line-height: 36px !important;
+        z-index: 3;
+        position: relative;
+    }
+    &__content {
+        padding: 100px 36px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

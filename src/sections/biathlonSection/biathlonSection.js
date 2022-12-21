@@ -3,11 +3,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./styles.module.scss"
 import Heading from '../../components/heading/heading';
-import skiGirl from '../../assets/images/ski-girl.png';
+import biathletin from '../../assets/images/biathlon.png';
+import shoot from '../../assets/images/shoot.png';
 
-function SkiSection() {
+function BiathlonSection() {
     gsap.registerPlugin(ScrollTrigger);
-    const skiRef = useRef();
+    const shootRef = useRef();
     const headingRef = useRef();
     const rootEl = useRef(null);
     useEffect(() => {
@@ -16,56 +17,62 @@ function SkiSection() {
             headingRef.current, 
             {
                 x: -20,
-                opacity: 0
+                opacity: 0,
             },
             {
                 x: 0,
                 opacity: 1,
+                duration: 1.5,
+                ease: "expo.out",
                 scrollTrigger: {
-                    start: "80px center",
+                    start: "top center",
                     trigger: rootEl.current,
                 },
         })
     });
 
     useEffect(() => {
-        const element = skiRef.current;
+        const element = shootRef.current;
         gsap.fromTo(
             element,
             {
-                y: 0,
-                x: 200,
-                scale: 0.1,
+                opacity: 1,
+                x: 0,
             },
             {
-            y: 120,
-            x: -80,
-            scale: 1,
-            duration: 2,
+            opacity: 0,
+            delay: 1.5,
+            x: 3,
+            duration: 1,
             ease: "none",
+            repeat: -1,
             scrollTrigger: {
                 trigger: rootEl.current,
-                start: "20px center",
+                start: "top bottom",
             },
         }
         );
     });
 
     return (
-        <div className={styles.skiSection}>
-            <div className={styles.skiSection__content} ref={rootEl} >
+        <div className={styles.biathlonSection}>
+            <div className={styles.biathlonSection__content} ref={rootEl} >
                 <Heading 
                     tag="h2"
                     variant="primary"
-                    customClass={styles.skiSection__mainline}
+                    customClass={styles.biathlonSection__mainline}
                     ref={headingRef}
                 >
-                    Es wird kalt ...
+                    Bei der Biathlon WM in Oberhof
                 </Heading>
             </div>
-            <img ref={skiRef} src={skiGirl} alt="Skifahrerin" className={styles.skiSection__skiGirl} />
+            <div className={styles.biathlonSection__visuals}>
+                <img src={biathletin} alt="Biathletin" className={styles.biathlonSection__biathletin} />
+                <img ref={shootRef} src={shoot} alt="Schuss" className={styles.biathlonSection__shoot} />
+            </div>
+            
         </div>
   );
 }
 
-export default SkiSection;
+export default BiathlonSection;

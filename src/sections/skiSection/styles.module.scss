@@ -9,15 +9,13 @@
     position: relative;
     overflow-x: clip;
     &__skiGirl {
-        width: 130px;
+        width: 170px;
         position: absolute;
         bottom: 140px;
         left: calc(50% + 70px);
     }
     &__mainline {
         max-width: 11rem;
-        font-size: 36px !important;
-        line-height: 36px !important;
         z-index: 3;
         position: relative;
     }

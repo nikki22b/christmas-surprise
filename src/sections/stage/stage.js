@@ -34,10 +34,10 @@ function Stage() {
         gsap.fromTo(
             element,
             {
-                y: 150,
+                y: -150,
             },
             {
-            y: -30,
+            y: 50,
             duration: 1,
             ease: "none",
             scrollTrigger: {
@@ -81,9 +81,12 @@ function Stage() {
                     Zieh dich warm an!
                 </Heading>
             </div>
-            <img ref={bgRef} src={mountains} alt="Berge von Oberhof" className={styles.stage__mountains} />
-            <img  ref={snowRef} src={snow} alt="Schneeflocken" className={styles.stage__snow} />
-            <img src={mountainsBg} alt="Berge von Oberhof" 
+            <img src={mountains} alt="Berge von Oberhof" className={styles.stage__mountains} />
+            <img ref={snowRef} src={snow} alt="Schneeflocken" className={styles.stage__snow} />
+            <img 
+                ref={bgRef}
+                src={mountainsBg} 
+                alt="Berge von Oberhof" 
                 className={`
                     ${styles.stage__mountains}
                     ${styles['stage__mountains--second']}
