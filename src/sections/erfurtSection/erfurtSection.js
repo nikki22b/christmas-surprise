@@ -30,7 +30,6 @@ function ErfurtSection() {
                 scrollTrigger: {
                     start: "center center",
                     trigger: rootEl.current,
-                    markers: true,
                 },
         })
     });
@@ -50,7 +49,6 @@ function ErfurtSection() {
                 scrollTrigger: {
                     start: "center center",
                     trigger: rootEl.current,
-                    markers: true,
                 },
         })
     });
