@@ -28,7 +28,7 @@ function ErfurtSection() {
                 duration: 1.5,
                 ease: "expo.out",
                 scrollTrigger: {
-                    start: "center center",
+                    start: "bottom bottom",
                     trigger: rootEl.current,
                 },
         })
@@ -47,7 +47,7 @@ function ErfurtSection() {
                 duration: 1.5,
                 ease: "expo.out",
                 scrollTrigger: {
-                    start: "center center",
+                    start: "bottom bottom",
                     trigger: rootEl.current,
                 },
         })
